@@ -8,7 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const Contact = () => {
   return (
     <div>
-      <Hero2 heading1="Contact." heading2="Let's make connection ! " />
+      <Hero2 heading1="Contact" heading2="Let's make connection ! " />
       <div className="flex flex-col justify-center items-center pt-10">
         <div className="w-[500px] text-gray-200 flex flex-row justify-center items-center border border-gray-100 p-5 rounded">
           <MdEmail size={30}/>

@@ -1,5 +1,5 @@
 import React from "react";
-import project_hero from "../assets/images/project_hero.jpeg"
+import project_hero from "../assets/images/project_hero.jpg"
 
 const Hero2 = ({heading1,heading2}) => {
   return (
@@ -11,8 +11,8 @@ const Hero2 = ({heading1,heading2}) => {
           alt="background"
         />
         <div className="absolute w-full top-[35%] flex flex-col justify-center items-center">
-            <h1 className="font-bold text-[50px] ">{heading1}.</h1>
-            <h2 className="text-[25px] text-gray-300">{heading2}</h2>
+            <h1 className="font-bold text-[50px] text-yellow-400">{heading1}.</h1>
+            <h2 className="text-[25px] ">{heading2}</h2>
         </div>
       </div>
     </div>
