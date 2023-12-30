@@ -5,8 +5,8 @@ import NavBar from "./NavBar";
 const Header=()=>{
     return(
         <div>
-            <div className="absolute w-full flex justify-between m-3 text-white">
-                <Link to="/" className="font-bold text-[30px]"><h1>Portfolio</h1></Link>
+            <div className="absolute w-full flex justify-between text-white mt-3">
+                <Link to="/" className="font-bold text-[30px] ml-2"><h1>Portfolio</h1></Link>
                 <NavBar/>
             </div>
         </div>

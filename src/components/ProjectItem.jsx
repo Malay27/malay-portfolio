@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ProjectItem = ({ project }) => {
   const { title, duration, discription, tech_stack, projectLinks } = project;
   return (
-    <div className="text-white m-4 border-2 p-2 flex flex-col bg-gray-900">
+    <div className="text-white m-4 border-2 p-2 flex flex-col bg-gray-400">
       <div className="flex justify-between items-center mb-2">
         <h2 className="font-bold text-3xl">{title}</h2>
         <p className="text-lg text-gray-300">{duration}</p>

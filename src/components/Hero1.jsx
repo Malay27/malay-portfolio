@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero1 = () => {
   return (
-    <div className="w-full h-[550px] lg:h-[850px] text-white">
+    <div className="w-full h-[550px] lg:h-[850px] text-white ">
       <div className="w-full h-full">
         <img
           className="w-full h-full object-cover object-top"
