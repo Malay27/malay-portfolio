@@ -19,7 +19,7 @@ const Home = () => {
         {
           projectAll.map((project)=>(
             <div key={project.title} className='flex flex-col justify-center w-[400px] border border-gray-200 m-4'>
-              <img className='w-full h-[200px]' src={project.ss}/>
+              <img className='w-full h-[200px]' src={project.ss} alt={project.title}/>
               <h2 className='text-[25px] font-bold m-1 text-yellow-200'>{project.title}</h2>
               <p className='text-[20px] m-1'>{wrapText(project.discription[0],70)}</p>
               <Link className='text-[12px] m-1 text-blue-400' to="/project">More</Link>
