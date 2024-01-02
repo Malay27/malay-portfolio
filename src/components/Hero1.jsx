@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import home_hero from "../assets/images/home_hero.jpg";
 import { Link } from "react-router-dom";
 
 const Hero1 = () => {
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = home_hero;
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+  }, []);
+
   return (
     <div className="w-full h-[550px] lg:h-[850px] text-black-500 ">
-      <img
+      {imageLoaded ? (
+        <img
+          className="w-full h-full object-cover object-top"
+          src={home_hero}
+          alt="background"
+        />
+      ) : (
+        <div>Loading...</div>
+      )}
+      {/* <img
         className="w-full h-full object-cover object-top"
-        src={home_hero}
+        src={homeHero}
         alt="background"
-      />
+      /> */}
       <div className="absolute w-full top-[35%] flex flex-col justify-center items-center">
         <h2 className="uppercase text-[25px] text-gray-300">
           Hi' I am Malay Jiyani👋

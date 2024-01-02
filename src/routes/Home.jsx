@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero1 from '../components/Hero1';
 import { projectsList } from '../constant';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const [projectAll,setProjectAll] =useState(projectsList);
+  const [projectAll,setProjectAll] =useState([]);
+
+  useEffect(()=>{
+    setProjectAll(projectsList);
+  },[])
 
   const wrapText=(str,maxLength)=>{
     if(!str) return "";
