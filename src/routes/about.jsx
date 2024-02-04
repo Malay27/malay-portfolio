@@ -1,37 +1,54 @@
 import React from "react";
-import Hero2 from "../components/Hero2";
-import { Link } from "react-router-dom";
+import {
+  Box,
+  Heading,
+  Text,
+  Image,
+  VStack,
+  Center,
+  Button,
+} from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import profile_pic from "../assets/images/profile-pic.png";
+import Hero2 from "../components/Hero2";
 
 const About = () => {
   return (
-    <div>
-      <Hero2 heading1="Abouts" heading2="I am friendly Front-End Developer"/>
-      <div className="text-white flex flex-row items-center mt-10">
-        <div className="w-3/4 flex flex-col justify-center m-auto">
-          <div className="text-center">
-            <h2 className="text-[35px] font-bold">Who am I?</h2>
-            <p className="text-[23px]">
-              Malay is a Passionate Computer Science Student with a huge love
-              for Java, JavaScript, DSA.
-            </p>
-            <p className="text-[23px]">
-              Malay love to travel 🏕️ and watch a movies 🎥.
-            </p>
-            <p className="text-[23px]">Malay love to watch Anime ⛩️</p>
-            <Link
-              to="/contact"
-              className="border border-white bg-yellow-400 text-black px-5 py-1 ml-2 mt-3 inline-block"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-        <div className="w-1/4">
-          <img className="w-[70%] h-[70%]" src={profile_pic} />
-        </div>
-      </div>
-    </div>
+    <Center>
+      <Box
+        bgGradient="linear(to-br, #040013, #0a0220, #0f032d)"
+        color="white"
+        p={5}
+        w="100%"
+      >
+        <Hero2 heading1="Abouts" heading2="I am friendly Front-End Developer" />
+        <VStack spacing={5} align="center" mt={20}>
+          <Image
+            borderRadius="full"
+            boxSize="250px"
+            src={profile_pic}
+            alt="Profile Picture"
+            boxShadow="0px 0px 30px 5px rgba(0, 0, 0, 0.2)"
+            border="2px"
+            borderColor="purple.500"
+            transition="transform 0.2s"
+            _hover={{ transform: "scale(1.2)" }}
+          />
+          <Heading as="h2" size="xl">
+            Who am I?
+          </Heading>
+          <Text>
+            Malay is a Passionate Computer Science Student with a huge love for
+            Java, JavaScript, DSA.
+          </Text>
+          <Text>Malay love to travel 🏕️ and watch a movies 🎥.</Text>
+          <Text>Malay love to watch Anime ⛩️</Text>
+          <Button as={RouterLink} to="/contact" colorScheme="purple">
+            Contact
+          </Button>
+        </VStack>
+      </Box>
+    </Center>
   );
 };
 

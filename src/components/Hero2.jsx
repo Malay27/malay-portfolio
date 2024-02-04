@@ -1,21 +1,38 @@
-import React from "react";
-import project_hero from "../assets/images/project_hero.jpg"
+import { Box, Heading } from "@chakra-ui/react";
 
-const Hero2 = ({heading1,heading2}) => {
+const Hero2 = ({ heading1, heading2 }) => {
   return (
-    <div className="w-full h-[500px] lg:h-[500px] text-white mx-0">
-      <div className="w-full h-[500px]">
-        <img
-          className="w-full h-[500px] object-cover object-top"
-          src={project_hero}
-          alt="background"
-        />
-        <div className="absolute w-full top-[35%] flex flex-col justify-center items-center">
-            <h1 className="font-bold text-[50px] text-yellow-400">{heading1}.</h1>
-            <h2 className="text-[25px] ">{heading2}</h2>
-        </div>
-      </div>
-    </div>
+    <Box
+      bgGradient="linear(to-br, #040013, #0a0220, #0f032d)"
+      w="100%"
+      p={32} // Increased padding
+      color="white"
+      textAlign="center"
+    >
+      <Heading
+        as="h1"
+        size="3xl"
+        mb={5}
+        sx={{
+          background: "linear-gradient(to bottom right, white, gray)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+      >
+        {heading1}
+      </Heading>
+      <Heading
+        as="h2"
+        size="2xl"
+        sx={{
+          background: "linear-gradient(to bottom right, white, gray)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+      >
+        {heading2}
+      </Heading>
+    </Box>
   );
 };
 
