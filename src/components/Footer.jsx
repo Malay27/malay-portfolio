@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaMobile } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
@@ -11,53 +10,62 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import { Box, Flex, Text, Link, Icon } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 mt-5 flex flex-row justify-between">
-      <div className="flex flex-col justify-center items-center p-10 ml-20 ">
-        <div className="w-[500px] text-gray-200 flex flex-row items-center  p-2 rounded">
-          <MdEmail size={30} />
-          <Link className="ml-3" to="mailto:malayjiyani111@gmail.com">
-            malayjiyani111@gmail.com
+    <Flex
+      justify="space-between"
+      p={4}
+      bgGradient="linear(to-br, #040013, #0a0220, #0f032d)"
+      color="white"
+    >
+      <Box mt={10} ml={10} p={4} borderRadius="md" boxShadow="md">
+        <Link href="mailto:malayjiyani111@gmail.com" color="white">
+          <Icon as={MdEmail} color="blue.500" mr={2}/> malayjiyani111@gmail.com
+        </Link>
+        <Text color="white">
+          <Icon as={FaMobile} color="green.500" mr={2}/> 9510696046
+        </Text>
+        <Text color="white">
+          <Icon as={FaLocationDot} color="red.500" mr={2}/> Amreli Gujarat India
+        </Text>
+      </Box>
+      <Box mt={20} mr={10}>
+        <Flex>
+          <Link
+            href="https://www.linkedin.com/in/malayjiyani"
+            isExternal
+            mr={5}
+          >
+            <Icon as={FaLinkedin} />
           </Link>
-        </div>
-        <div className="w-[500px] text-gray-200 flex flex-row  items-center  p-2 rounded mt-1">
-          <FaMobile size={30} />
-          <p className="ml-3">+91 9510696046</p>
-        </div>
-        <div className="w-[500px] text-gray-200 flex flex-row items-center  p-2 rounded mt-1">
-          <FaLocationDot size={30} />
-          <p className="ml-3">Amreli, Gujarat</p>
-        </div>
-      </div>
-      <div className="text-white flex flex-col justify-center items-center mr-20 p-10">
-        <div >
-          <p className="text-[22px]">Connect with me</p>
-        </div>
-        <div className="flex flex-row ">
-          <Link className="m-2" to="https://www.linkedin.com/in/malayjiyani">
-            <FaLinkedin />
+          <Link href="https://www.github.com/Malay27" isExternal mr={5}>
+            <Icon as={FaGithub} />
           </Link>
-          <Link className="m-2" to="https://www.github.com/Malay27">
-            <FaGithub />
+          <Link href="https://twitter.com/MalayJiyani" isExternal mr={5}>
+            <Icon as={FaTwitter} />
           </Link>
-          <Link className="m-2" to="https://twitter.com/MalayJiyani">
-            <FaTwitter />
+          <Link
+            href="https://www.reddit.com/user/reva_de_ne111"
+            isExternal
+            mr={5}
+          >
+            <Icon as={FaReddit} />
           </Link>
-          <Link className="m-2" to="https://www.reddit.com/user/reva_de_ne111">
-            <FaReddit />
+          <Link
+            href="https://www.instagram.com/malay.jiyani/"
+            isExternal
+            mr={5}
+          >
+            <Icon as={FaInstagram} />
           </Link>
-          <Link className="m-2" to="https://www.instagram.com/malay.jiyani/">
-            <FaInstagram />
+          <Link href="https://leetcode.com/20bce111/" isExternal>
+            <Icon as={SiLeetcode} />
           </Link>
-          <Link className="m-2" to="https://leetcode.com/20bce111/">
-            <SiLeetcode />
-          </Link>
-        </div>
-      </div>
-    </div>
+        </Flex>
+      </Box>
+    </Flex>
   );
 };
-
 export default Footer;
